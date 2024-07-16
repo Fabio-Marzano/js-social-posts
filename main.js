@@ -55,3 +55,12 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+//RECUPERO L'ELEMENTO DAL DOM//
+const container = document.getElementById('container');
+//CICLO GLI ELEMENTI PER INSERIRLI NEL CONTAINER//
+
+posts.forEach((post) => {
+    container.innerHTML +=  `<div>${post.content}</div>`;
+});
+
