@@ -89,7 +89,7 @@ posts.forEach((post) => {
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${likes}</b> persone
+                        Piace a <b id="like-counter-${id}" class="js-likes-counter">${likes}</b> persone
                     </div>
                 </div> 
             </div>            
@@ -97,5 +97,14 @@ posts.forEach((post) => {
 });
 
 //RECUPERO IL PULSANTE DAL DOM//
-const like_buttons = document.querySelectorAll('.js-likes-buttons');
-console.log(like_buttons);
+const like_buttons = document.querySelectorAll('.js-likes-button');
+
+//RECUPERO ELEMENTO CONTENENTE I LIKES//
+const likes_counter = document.querySelectorAll('.js-likes-counter');
+//AVVIO CICLO ARRAY DEL PULSANTE//
+for (let i = 0; i < like_buttons.length; i++) {
+    //CREO VARIABILE CON IL VALORE OTTENUTO//
+    let button = like_buttons[i];
+
+    console.log(button);
+}
