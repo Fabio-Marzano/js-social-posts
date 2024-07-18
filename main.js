@@ -64,7 +64,7 @@ posts.forEach((post) => {
 
     let { id, author, content, media, likes, created } = post;
     container.innerHTML += `
-              <div class="post">
+    <div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
@@ -93,7 +93,7 @@ posts.forEach((post) => {
                     </div>
                 </div> 
             </div>            
-        </div> `;
+        </div>`;
 });
 
 //RECUPERO IL PULSANTE DAL DOM//
@@ -105,6 +105,9 @@ const likes_counter = document.querySelectorAll('.js-likes-counter');
 for (let i = 0; i < like_buttons.length; i++) {
     //CREO VARIABILE CON IL VALORE OTTENUTO//
     let button = like_buttons[i];
-
-    console.log(button);
+    //AGGIUNGO EVENTO CLICK//
+    button.addEventListener('click', function () {
+        //AGGIUNGO LA CLASSE PER INDICARE CHE IL PULSANTE E' STATO CLICCATO//
+        this.classList.add('like-button--liked');
+    });
 }
